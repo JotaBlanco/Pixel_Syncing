@@ -21,7 +21,7 @@ PIXEL_PATH = '/sdcard/DCIM/Camera/'
 DEVICE_ID = 'HT6940202447'  # Your Pixel XL
 
 # Transfer settings
-BATCH_SIZE = 30  # Files per batch
+BATCH_SIZE = 50  # Files per batch
 MAX_SIZE_GB = 10.0  # Maximum GB on Pixel before pausing
 SLEEP_MINUTES = 15  # Minutes to wait when storage is full
 

@@ -255,7 +255,7 @@ def transfer_to_pixel(
         while current_size_gb >= max_size_gb:
             print(f"⏸️  Storage full ({current_size_gb:.2f} GB >= {max_size_gb} GB)")
             print(f"💤 Sleeping for {sleep_minutes} minutes...")
-            print(f"   👉 Use this time to run 'Free up space' in Google Photos app on Pixel!")
+            print(f"   💡 Good time to free up space!")
             time.sleep(sleep_minutes * 60)
 
             current_size_mb = get_pixel_folder_size_mb(pixel_path, device_id)
@@ -319,9 +319,9 @@ def transfer_to_pixel(
 
         # Pause between batches to let Pixel breathe and sync to Google Photos
         if i + batch_size < len(all_files):  # Don't pause after last batch
-            pause_seconds = 30
+            pause_seconds = 10
             print(f"⏸️  Pausing {pause_seconds} seconds between batches to let Pixel sync...")
-            print(f"   💡 Good time to check Google Photos sync status or free up space!")
+            print(f"   💡 Good time to check Google Photos sync status!")
             time.sleep(pause_seconds)
 
     # Final summary
