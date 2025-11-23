@@ -1,6 +1,8 @@
 # User data - personal photos/videos (shared by both python_scripts and distributable)
-01_files_to_sink/
-02_files_to_doublecheck/
+01_files_to_sink/*
+!01_files_to_sink/.gitkeep
+02_files_to_doublecheck/*
+!02_files_to_doublecheck/.gitkeep
 distributable/pixelsync_config.json
 
 # Python
