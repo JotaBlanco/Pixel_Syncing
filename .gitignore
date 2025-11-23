@@ -1,8 +1,12 @@
-# Exclude folders containing user's personal photos/videos
+# User data - personal photos/videos (shared by both python_scripts and distributable)
 01_files_to_sink/
 02_files_to_doublecheck/
+distributable/pixelsync_config.json
 
 # Python
+python_scripts/__pycache__/
+python_scripts/.venv/
+distributable/__pycache__/
 __pycache__/
 *.py[cod]
 *$py.class
@@ -12,6 +16,12 @@ __pycache__/
 venv/
 ENV/
 env/
+
+# Build artifacts
+distributable/build/
+distributable/dist/
+distributable/*.spec
+distributable/adb/
 
 # macOS
 .DS_Store

@@ -1,0 +1,15 @@
+# User configuration and data
+Photos_To_Sync/
+pixelsync_config.json
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# ADB binaries (too large for git)
+adb/
+
+# Python
+__pycache__/
+*.pyc

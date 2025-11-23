@@ -13,16 +13,21 @@ This will automatically:
 5. Resume automatically after you free up space
 """
 
+import os
 from pixel_transfer import transfer_to_pixel
 
+# Get absolute paths based on script location
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)
+
 # Configuration
-MAC_FOLDER = '01_files_to_sink'
+MAC_FOLDER = os.path.join(REPO_ROOT, '01_files_to_sink')  # Shared folder at repo root
 PIXEL_PATH = '/sdcard/DCIM/Camera/'
 DEVICE_ID = 'HT6940202447'  # Your Pixel XL
 
 # Transfer settings
 BATCH_SIZE = 50  # Files per batch
-MAX_SIZE_GB = 10.0  # Maximum GB on Pixel before pausing
+MAX_SIZE_GB = 15.0  # Maximum GB on Pixel before pausing
 SLEEP_MINUTES = 15  # Minutes to wait when storage is full
 
 # File types to transfer (Google Photos compatible)

@@ -1,0 +1,63 @@
+PixelSync - Distributable Package Contents
+==========================================
+
+CORE FILES (Python Source):
+---------------------------
+pixelsync.py           - Main application entry point
+pixel_sync_core.py     - Transfer engine (core sync logic)
+config_manager.py      - Configuration and setup wizard
+requirements.txt       - Python dependencies (for building)
+
+BUILD FILES:
+-----------
+build.sh              - macOS/Linux build script
+build.bat             - Windows build script
+build.spec            - PyInstaller spec file
+
+DOCUMENTATION:
+-------------
+README.md                      - Full user documentation
+QUICKSTART.md                  - Simple quick start guide for non-technical users
+BUILDING.md                    - Instructions for building executables
+FOR_DEVELOPER.md               - Developer notes (for you)
+DISTRIBUTION_CHECKLIST.md      - Checklist for preparing distribution
+PACKAGE_CONTENTS.txt           - This file
+
+CONFIGURATION:
+-------------
+.gitignore            - Git ignore file
+
+TO BUILD:
+--------
+1. Download adb binaries for your target platform(s)
+2. Place in adb/ folder (adb/mac/, adb/windows/, adb/linux/)
+3. Run build script (build.sh or build.bat)
+4. Package dist/PixelSync with README.md and QUICKSTART.md
+5. Share with your friend!
+
+WHAT'S MISSING (You need to add):
+---------------------------------
+adb/                  - Android Debug Bridge binaries
+  mac/adb            - macOS adb executable
+  windows/           - Windows adb.exe + DLLs
+  linux/adb          - Linux adb executable
+
+Download from: https://developer.android.com/studio/releases/platform-tools
+
+AFTER BUILDING:
+--------------
+You'll have:
+- dist/PixelSync (macOS) or dist/PixelSync.exe (Windows)
+- This is a standalone executable (~40-50MB)
+- No Python installation required
+- Includes all dependencies
+
+FOR YOUR FRIEND:
+---------------
+Give them:
+1. The executable (PixelSync or PixelSync.exe)
+2. README.md
+3. QUICKSTART.md
+
+They run it, follow the setup wizard, and start syncing!
+

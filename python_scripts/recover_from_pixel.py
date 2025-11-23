@@ -4,11 +4,16 @@ Recovery script to pull files back from Pixel to Mac for manual verification.
 Use this when Google Photos doesn't detect files properly.
 """
 
+import os
 from pixel_transfer import transfer_files_from_pixel
+
+# Get absolute paths based on script location
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)
 
 # Configuration
 PIXEL_PATH = '/sdcard/DCIM/Camera/'
-MAC_RECOVERY_FOLDER = '02_files_to_doublecheck'
+MAC_RECOVERY_FOLDER = os.path.join(REPO_ROOT, '02_files_to_doublecheck')  # Shared folder at repo root
 DEVICE_ID = 'HT6940202447'
 
 if __name__ == "__main__":
